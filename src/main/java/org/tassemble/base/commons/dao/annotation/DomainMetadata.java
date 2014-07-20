@@ -7,10 +7,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/*
- * @author hzfjd@corp.netease.com
- * @date 2013-4-27
- */
 @Target({ ElementType.CONSTRUCTOR, ElementType.TYPE, ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited

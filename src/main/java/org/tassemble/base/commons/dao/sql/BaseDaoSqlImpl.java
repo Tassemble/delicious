@@ -3,7 +3,6 @@ package org.tassemble.base.commons.dao.sql;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.math.BigInteger;
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -43,11 +42,7 @@ import com.netease.framework.dao.sql.ListCondition;
 import com.netease.framework.dao.sql.annotation.DataProperty;
 import com.netease.framework.dao.sql.annotation.VirtualProperty;
 import com.netease.framework.dbsupport.SqlManager;
-import com.netease.framework.dbsupport.impl.DBResource;
 
-/**
- * @author hzfjd@corp.netease.com
- */
 
 public class BaseDaoSqlImpl<DomainObject> extends
 		DomainObjectDaoSqlBase<DomainObject> implements BaseDao<DomainObject>,
