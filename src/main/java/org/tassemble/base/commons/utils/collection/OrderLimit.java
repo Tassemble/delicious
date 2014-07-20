@@ -1,9 +1,5 @@
 package org.tassemble.base.commons.utils.collection;
 
-/*
- * @author hzfjd@corp.netease.com
- * @date 2012-12-15
- */
 public class OrderLimit {
 
     private String sortCriterial = null;

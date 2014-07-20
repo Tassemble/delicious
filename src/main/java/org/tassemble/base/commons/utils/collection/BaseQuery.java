@@ -2,10 +2,6 @@ package org.tassemble.base.commons.utils.collection;
 
 import java.io.Serializable;
 
-/*
- * @author hzfjd@corp.netease.com
- * @date 2012-7-12
- */
 public class BaseQuery implements Serializable {
 
     /**

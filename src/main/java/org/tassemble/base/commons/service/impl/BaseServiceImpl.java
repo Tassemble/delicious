@@ -10,11 +10,6 @@ import org.tassemble.base.commons.utils.collection.PaginationResult;
 
 import com.netease.framework.dao.sql.ListCondition;
 
-/**
- * @author hzfjd@corp.netease.com
- * @param <D>
- * @param <T>
- */
 public class BaseServiceImpl<D extends BaseDao<T>, T> implements BaseService<T> {
 
     private BaseDao<T> baseDao;

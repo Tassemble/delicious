@@ -3,10 +3,6 @@ package org.tassemble.base.commons.utils.collection;
 import java.io.Serializable;
 import java.util.List;
 
-/*
- * @author jinde.fangjd
- * @date 2012-4-12
- */
 public class PaginationResult<T> implements Serializable {
 
     /**

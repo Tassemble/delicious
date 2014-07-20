@@ -10,12 +10,6 @@ import org.springframework.util.Assert;
 
 import com.netease.dbsupport.impl.ConnectionManagerDDBImpl;
 
-/**
- * hzfjd@corp.netease.com
- * 
- * @author owner
- * 
- */
 public class NeteaseDataSourceAdapter extends ConnectionManagerDDBImpl
 		implements DataSource {
 

@@ -1,9 +1,5 @@
 package org.tassemble.base.commons.utils.collection;
 
-/*
- * @author jinde.fangjd
- * @date 2012-4-12
- */
 public class PaginationBaseQuery extends BaseQuery {
 
     /**

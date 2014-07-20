@@ -5,10 +5,6 @@ import java.sql.SQLException;
 
 import com.netease.framework.dbsupport.callback.DBObjectHandler;
 
-/*
- * @author hzfjd@corp.netease.com
- * @date 2012-12-19
- */
 public class IdDBObjectHander implements DBObjectHandler<Long> {
 
     private static IdDBObjectHander s_instance = new IdDBObjectHander();

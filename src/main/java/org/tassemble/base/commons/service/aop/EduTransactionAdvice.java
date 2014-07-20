@@ -7,10 +7,6 @@ import org.apache.commons.logging.LogFactory;
 
 import com.netease.dbsupport.transaction.IDBTransactionManager;
 
-/*
- * @author hzfjd@corp.netease.com
- * @date 2012-5-3
- */
 public class EduTransactionAdvice implements MethodInterceptor {
 
     private static final Log      log          = LogFactory.getLog(EduTransactionAdvice.class);
