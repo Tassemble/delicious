@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
+import org.tassemble.base.commons.dao.ListCondition;
 
-import com.netease.framework.dao.sql.ListCondition;
 
 public class SqlBuilder {
 

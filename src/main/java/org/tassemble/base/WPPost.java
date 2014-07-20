@@ -5,7 +5,8 @@ package org.tassemble.base;
 
 import java.sql.Timestamp;
 
-import com.netease.framework.dao.sql.annotation.DataProperty;
+import org.tassemble.base.commons.dao.sql.annotations.DataProperty;
+
 
 /**
  * @author Administrator

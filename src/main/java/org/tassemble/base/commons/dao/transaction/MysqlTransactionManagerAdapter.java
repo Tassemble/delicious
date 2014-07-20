@@ -1,9 +1,10 @@
 package org.tassemble.base.commons.dao.transaction;
 
-import com.netease.dbsupport.exception.DBSupportRuntimeException;
-import com.netease.dbsupport.transaction.IDBTransactionManager;
 import java.sql.Connection;
 import java.sql.SQLException;
+
+import org.tassemble.base.commons.dao.IDBTransactionManager;
+import org.tassemble.base.commons.dao.sql.DBSupportRuntimeException;
 
 public class MysqlTransactionManagerAdapter implements IDBTransactionManager {
 	private ThreadLocal<Boolean>	m_autoCommit	= new ThreadLocal();

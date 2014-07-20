@@ -25,23 +25,21 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 import org.tassemble.base.commons.dao.BaseDao;
+import org.tassemble.base.commons.dao.DomainObjectDaoSqlBase;
+import org.tassemble.base.commons.dao.ListCondition;
+import org.tassemble.base.commons.dao.SqlManager;
 import org.tassemble.base.commons.dao.annotation.DomainMetadata;
 import org.tassemble.base.commons.dao.handler.MaxIdHandler;
+import org.tassemble.base.commons.dao.sql.annotations.DataProperty;
+import org.tassemble.base.commons.dao.sql.annotations.VirtualProperty;
+import org.tassemble.base.commons.domain.ObjectBase;
+import org.tassemble.base.commons.dto.ObjectConfig;
 import org.tassemble.base.commons.utils.collection.LowcaseKeyHashMap;
 import org.tassemble.base.commons.utils.collection.OrderLimit;
 import org.tassemble.base.commons.utils.collection.PaginationBaseQuery;
 import org.tassemble.base.commons.utils.collection.PaginationResult;
 import org.tassemble.base.commons.utils.sql.SqlBuilder;
 import org.tassemble.base.commons.utils.text.NeteaseEduStringUtils;
-
-import com.netease.framework.config.ObjectConfig;
-import com.netease.framework.dao.ObjectBase;
-import com.netease.framework.dao.sql.AddParamMap;
-import com.netease.framework.dao.sql.DomainObjectDaoSqlBase;
-import com.netease.framework.dao.sql.ListCondition;
-import com.netease.framework.dao.sql.annotation.DataProperty;
-import com.netease.framework.dao.sql.annotation.VirtualProperty;
-import com.netease.framework.dbsupport.SqlManager;
 
 
 public class BaseDaoSqlImpl<DomainObject> extends
@@ -364,8 +362,7 @@ public class BaseDaoSqlImpl<DomainObject> extends
 			}
 		}
 
-		List<DomainObject> list = getSqlManager()
-				.queryList(sb.toString(), this);
+		List<DomainObject> list = getSqlManager().queryList(sb.toString(), this);
 		paginationResult.setList(list);
 		return paginationResult;
 	}
@@ -1593,4 +1590,6 @@ public class BaseDaoSqlImpl<DomainObject> extends
 	public void afterPropertiesSet() throws Exception {
 		initBaseDao();
 	}
+
+
 }

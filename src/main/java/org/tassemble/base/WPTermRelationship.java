@@ -1,6 +1,7 @@
 package org.tassemble.base;
 
-import com.netease.framework.dao.sql.annotation.DataProperty;
+import org.tassemble.base.commons.dao.sql.annotations.DataProperty;
+
 
 public class WPTermRelationship {
 	Long objectId;

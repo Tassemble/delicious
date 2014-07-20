@@ -5,9 +5,9 @@ import java.lang.reflect.Method;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.TestContext;
 import org.springframework.test.context.support.AbstractTestExecutionListener;
+import org.tassemble.base.commons.dao.IDBTransactionManager;
 import org.tassemble.base.commons.service.aop.EduTransactionAdvice;
 
-import com.netease.dbsupport.transaction.IDBTransactionManager;
 
 /*
  * @author hzfjd@corp.netease.com

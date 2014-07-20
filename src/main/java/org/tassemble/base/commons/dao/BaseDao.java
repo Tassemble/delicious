@@ -6,8 +6,6 @@ import org.tassemble.base.commons.utils.collection.OrderLimit;
 import org.tassemble.base.commons.utils.collection.PaginationBaseQuery;
 import org.tassemble.base.commons.utils.collection.PaginationResult;
 
-import com.netease.framework.dao.DomainObjectDao;
-import com.netease.framework.dao.sql.ListCondition;
 
 public interface BaseDao<DomainObject> extends DomainObjectDao<DomainObject> {
 

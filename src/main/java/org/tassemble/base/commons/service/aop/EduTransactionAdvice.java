@@ -4,8 +4,8 @@ import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.tassemble.base.commons.dao.IDBTransactionManager;
 
-import com.netease.dbsupport.transaction.IDBTransactionManager;
 
 public class EduTransactionAdvice implements MethodInterceptor {
 

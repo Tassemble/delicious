@@ -13,7 +13,7 @@
 		<property name="ignoreUnresolvablePlaceholders" value="true" />
 	</bean>
 
-	<bean id="mysqlDataSource" class="com.netease.dbsupport.impl.ConnectionManagerMysqlImpl"
+	<bean id="mysqlDataSource" class="org.tassemble.base.commons.dao.sql.ConnectionManagerMysqlImpl"
 		init-method="init">
 		<property name="url">
 			<value>${mysql.url}</value>
@@ -55,7 +55,7 @@
 		class="org.tassemble.base.commons.dao.transaction.MysqlTransactionManagerAdapter">
 	</bean>
 
-	<bean id="runtimeStatCounter" class="com.netease.framework.stat.RuntimeStatCounterImpl">
+	<bean id="runtimeStatCounter" class="org.tassemble.base.commons.dao.sql.RuntimeStatCounterImpl">
 	</bean>
 
 	<bean id="sqlManager" class="org.tassemble.base.commons.dao.sql.SqlManagerEduProxy">
@@ -70,7 +70,7 @@
 		</property>
 	</bean>
 
-	<bean id="circleDaoBase" class="com.netease.framework.dao.sql.AbstractDaoSqlBase"
+	<bean id="circleDaoBase" class="org.tassemble.base.commons.dao.sql.AbstractDaoSqlBase"
 		abstract="true">
 		<property name="sqlManager">
 			<ref bean="sqlManager" />

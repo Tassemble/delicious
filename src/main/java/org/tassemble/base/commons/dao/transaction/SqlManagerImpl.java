@@ -17,16 +17,16 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import org.apache.commons.lang.time.StopWatch;
 import org.apache.log4j.Logger;
+import org.tassemble.base.commons.dao.IConnectionManager;
+import org.tassemble.base.commons.dao.IDBTransactionManager;
+import org.tassemble.base.commons.dao.RuntimeStatCounter;
+import org.tassemble.base.commons.dao.SqlManager;
+import org.tassemble.base.commons.dao.SqlManagerBase;
+import org.tassemble.base.commons.dao.handler.DBObjectHandler;
+import org.tassemble.base.commons.dao.sql.DBListHandler;
+import org.tassemble.base.commons.domain.DBResource;
 import org.tassemble.base.commons.utils.collection.CellLocker;
 
-import com.netease.dbsupport.IConnectionManager;
-import com.netease.dbsupport.transaction.IDBTransactionManager;
-import com.netease.framework.dbsupport.SqlManager;
-import com.netease.framework.dbsupport.callback.DBListHandler;
-import com.netease.framework.dbsupport.callback.DBObjectHandler;
-import com.netease.framework.dbsupport.impl.DBResource;
-import com.netease.framework.dbsupport.impl.SqlManagerBase;
-import com.netease.framework.stat.RuntimeStatCounter;
 
 public class SqlManagerImpl extends SqlManagerBase implements SqlManager {
 	private static final Logger		logger		= Logger.getLogger(SqlManagerImpl.class);

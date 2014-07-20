@@ -3,7 +3,6 @@ package org.tassemble.base.commons.dao.handler;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.netease.framework.dbsupport.callback.DBObjectHandler;
 
 public class MaxIdHandler implements DBObjectHandler<Long> {
 

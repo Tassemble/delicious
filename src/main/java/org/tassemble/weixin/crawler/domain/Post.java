@@ -1,7 +1,6 @@
 package org.tassemble.weixin.crawler.domain;
 
-import com.netease.framework.dao.sql.annotation.DataProperty;
-import java.math.BigDecimal;
+import org.tassemble.base.commons.dao.sql.annotations.DataProperty;
 
 public class Post {
 

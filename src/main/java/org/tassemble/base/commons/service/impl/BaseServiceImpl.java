@@ -3,12 +3,12 @@ package org.tassemble.base.commons.service.impl;
 import java.util.List;
 
 import org.tassemble.base.commons.dao.BaseDao;
+import org.tassemble.base.commons.dao.ListCondition;
 import org.tassemble.base.commons.service.BaseService;
 import org.tassemble.base.commons.utils.collection.OrderLimit;
 import org.tassemble.base.commons.utils.collection.PaginationBaseQuery;
 import org.tassemble.base.commons.utils.collection.PaginationResult;
 
-import com.netease.framework.dao.sql.ListCondition;
 
 public class BaseServiceImpl<D extends BaseDao<T>, T> implements BaseService<T> {
 
@@ -213,5 +213,6 @@ public class BaseServiceImpl<D extends BaseDao<T>, T> implements BaseService<T> 
     public List<T> getByDomainObjectSelectiveOpt(T domainObject, ListCondition lc) {
         return baseDao.getByDomainObjectSelectiveOpt(domainObject, lc);
     }
+
 
 }

@@ -25,12 +25,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
+import org.tassemble.base.commons.dao.SqlManager;
+import org.tassemble.base.commons.domain.ColumnMetadata;
+import org.tassemble.base.commons.domain.DBResource;
 import org.tassemble.base.dao.BaseTestCase;
 
 import com.google.common.collect.Lists;
-import com.netease.backend.db.result.ColumnMetadata;
-import com.netease.framework.dbsupport.SqlManager;
-import com.netease.framework.dbsupport.impl.DBResource;
 
 public class ReverseGenerator extends BaseTestCase {
 
@@ -82,7 +82,7 @@ public class ReverseGenerator extends BaseTestCase {
 						metaData.getColumnType(i), 
 						metaData.getColumnTypeName(i), 
 						metaData.getTableName(i), 
-						metaData.getSchemaName(i));
+						metaData.getSchemaName(i), metaData.getColumnDisplaySize(i));
 				columnMetaData.add(item);
 			}
 

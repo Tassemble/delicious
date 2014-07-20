@@ -4,9 +4,9 @@ import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.tassemble.base.commons.dao.IDBTransactionManager;
 
-import com.netease.dbsupport.transaction.IDBTransactionManager;
-import com.netease.memcache.transaction.IMemcacheTransactionManager;
+
 
 public class EduTransactionMemcachedAdvice implements MethodInterceptor {
 
@@ -14,7 +14,6 @@ public class EduTransactionMemcachedAdvice implements MethodInterceptor {
 			.getLog(EduTransactionMemcachedAdvice.class);
 	private IDBTransactionManager idbTransactionManager;
 
-	private IMemcacheTransactionManager imemcacheTransactionManager;
 
 	public Object invoke(MethodInvocation arg0) throws Throwable {
 
@@ -28,12 +27,9 @@ public class EduTransactionMemcachedAdvice implements MethodInterceptor {
 
 			try {
 				getIdbTransactionManager().setAutoCommit(false);
-				getImemcacheTransactionManager().setAutoCommit(false);
 				result = arg0.proceed();
 				getIdbTransactionManager().commit();
-				getImemcacheTransactionManager().commit();
 				getIdbTransactionManager().setAutoCommit(true);
-				getImemcacheTransactionManager().setAutoCommit(true);
 				if (log.isDebugEnabled()) {
 					log.debug(arg0.getMethod().getName()
 							+ " 'transaction commited.");
@@ -45,8 +41,6 @@ public class EduTransactionMemcachedAdvice implements MethodInterceptor {
 				}
 				getIdbTransactionManager().rollback();
 				getIdbTransactionManager().setAutoCommit(true);
-				getImemcacheTransactionManager().rollback();
-				getImemcacheTransactionManager().setAutoCommit(true);
 				if (log.isDebugEnabled()) {
 					log.debug(arg0.getMethod().getName()
 							+ " 'transaction  rollbacked.");
@@ -61,14 +55,7 @@ public class EduTransactionMemcachedAdvice implements MethodInterceptor {
 		return result;
 	}
 
-	public IMemcacheTransactionManager getImemcacheTransactionManager() {
-		return imemcacheTransactionManager;
-	}
 
-	public void setImemcacheTransactionManager(
-			IMemcacheTransactionManager imemcacheTransactionManager) {
-		this.imemcacheTransactionManager = imemcacheTransactionManager;
-	}
 
 	public IDBTransactionManager getIdbTransactionManager() {
 		return idbTransactionManager;

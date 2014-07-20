@@ -3,7 +3,9 @@ package org.tassemble.base.commons.domain;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.netease.framework.dao.sql.annotation.DataProperty;
+import org.tassemble.base.commons.dao.sql.annotations.DataProperty;
+
+
 
 
 public class BaseDo implements Serializable {
