@@ -98,6 +98,13 @@
 		<url-pattern>/weixin/*</url-pattern>
 	</servlet-mapping>
 
+
+	<servlet-mapping>
+		<servlet-name>mobile</servlet-name>
+		<url-pattern>/mob/*</url-pattern>
+	</servlet-mapping>
+	
+	
 	<welcome-file-list>
 		<welcome-file>index.htm</welcome-file>
 	</welcome-file-list>

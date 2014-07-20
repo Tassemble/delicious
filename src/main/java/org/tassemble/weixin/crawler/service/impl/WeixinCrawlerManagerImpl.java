@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
-import org.tassemble.weixin.config.AppConfig;
+import org.tassemble.delicious.config.AppConfig;
 import org.tassemble.weixin.crawler.domain.LinkMark;
 import org.tassemble.weixin.crawler.domain.Post;
 import org.tassemble.weixin.crawler.service.LinkMarkService;

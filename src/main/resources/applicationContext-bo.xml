@@ -20,7 +20,7 @@
 
 
 
-	<bean id="appConfig" class="org.tassemble.weixin.config.AppConfig"> 
+	<bean id="appConfig" class="org.tassemble.delicious.config.AppConfig"> 
 		<property name="domain">
 			<value>${domain}</value>
 		</property>
@@ -30,6 +30,14 @@
 	</context:component-scan>
 	<context:annotation-config />
 	
+	
+	 <bean id="mongoClient" class="com.mongodb.MongoClient">
+                <constructor-arg name="host" type="java.lang.String" value="${mongo_host}" />
+                <constructor-arg name="port" type="int" value="${mongo_port}" />
+     </bean>
+        
+        
+        
 	
 
 
