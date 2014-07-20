@@ -245,13 +245,6 @@
 		</dependency>
 
 
-
-		<!-- dao -->
-		<dependency>
-			<groupId>net.spy</groupId>
-			<artifactId>spy</artifactId>
-			<version>2.2.44</version>
-		</dependency>
 		<dependency>
 			<groupId>net.sf.ehcache</groupId>
 			<artifactId>ehcache-core</artifactId>
