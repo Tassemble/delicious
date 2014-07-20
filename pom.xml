@@ -27,6 +27,11 @@
 			<artifactId>freemarker</artifactId>
 			<version>2.3.15</version>
 		</dependency>
+		<dependency>
+			 <groupId>net.spy</groupId>
+			  <artifactId>spy</artifactId>
+			   <version>2.2.44</version>
+		   </dependency>
 
 
 		<dependency>
