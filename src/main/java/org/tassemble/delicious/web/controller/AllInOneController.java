@@ -20,6 +20,7 @@ import org.tassemble.delicious.config.AppConfig;
 import org.tassemble.delicious.dto.DeliciousResponseDto;
 import org.tassemble.utils.GsonUtils;
 
+import com.mongodb.BasicDBObject;
 import com.mongodb.DBCollection;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
@@ -55,7 +56,9 @@ public class AllInOneController {
         
         DBCollection dbCollection = mongoClient.getDB("delicious").getCollection(collection);
         
-        
+//        DBObject query = new BasicDBObject();
+//        query.put(paramString, paramObject)
+//        dbCollection.find(ref)
         Iterator<DBObject> objectItor =  dbCollection.find().iterator();
         
         
