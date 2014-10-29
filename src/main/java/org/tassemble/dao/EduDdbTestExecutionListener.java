@@ -10,7 +10,7 @@ import org.tassemble.base.commons.service.aop.EduTransactionAdvice;
 
 
 /*
- * @author hzfjd@corp.netease.com
+ * @author hzfjd@
  * @date 2012-5-3
  */
 public class EduDdbTestExecutionListener extends AbstractTestExecutionListener {
